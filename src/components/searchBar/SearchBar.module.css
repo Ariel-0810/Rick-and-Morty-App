@@ -1,0 +1,37 @@
+.divSearch{
+    background-color: aquamarine;
+    padding: 0.5em;
+    display: flex;
+    justify-content: right;
+    border-radius: 0.5em;
+    border: solid #d2d606;
+    width: 93vw;
+}
+
+.btn{
+    background-color: chartreuse;    
+    border-radius: 0.5em;
+    margin-left: 0.5em;
+    padding: 0.5em;    
+    color: #370617;
+    font-weight: 1000;
+    font-size: 0.7em;
+}
+.btn:hover{
+    background-color: #ffd60a;
+    cursor: pointer;
+}
+
+
+.input{
+    border-radius: 0.5em;
+    margin-left: 0.5em;
+    padding: 0.5em;
+    border: solid #06d6a0;
+    color: #370617;
+    font-weight: 700;
+    font-size: 1em;
+}
+.input:over{
+    background-color: #ffd60a;
+};

@@ -1,0 +1,19 @@
+.div{
+    background-color: dimgray;
+    font-size: 0.5em;
+}
+
+.button{
+    font-size: 1em;
+}
+
+.warning {
+    border: solid red 1px;
+    border-radius: 0.2em;
+  }
+  
+  .danger {
+    font-size: 10px;
+    color: red;
+    margin-left: 10em;
+  }
