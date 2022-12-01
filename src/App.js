@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./App.css"
 import About from "./components/about/About";
@@ -16,23 +15,24 @@ import Form from "./components/form/Form.jsx"
 
 
 function App () {
+  const location = useLocation();
+  const [characters, setCharacters] = useState([]);
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
   const username = 'ejemplo@gmail.com';
-  const password = '1password';
+  const password = 'mia0810';
   
   function login(userData) {
      if (userData.password === password && userData.username === username) {
         setAccess(true);
         navigate('/home');
      }
+     else {
+      alert('usuario o contraseña incorrectos');
+     }
   }
-  const location = useLocation()
-  const [characters, setCharacters] = useState([])
 
-  useEffect(() => {
-    !access && navigate('/');
-  }, [access]);
+ 
 
   function onSearch(character) {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -61,10 +61,11 @@ function App () {
     setCharacters(characters.filter(e => e.id !== id))
   };
   
-  const handleSubmit = (evento) => {
-    evento.preventDefault()
-    props.login(userData)
-  }
+
+
+  useEffect(() => {
+    !access && navigate('/');
+  }, [access]);
 
    return (
     <div className='App' style={{ padding: '25px' }}>
@@ -72,7 +73,7 @@ function App () {
         {location.pathname !== '/' && <Nav onSearch={onSearch}/>}
       </div>
       <Routes>
-        <Route path="/" element={<Form login={login} onSubmit={handleSubmit}/>}/>
+        <Route path="/" element={<Form login={login}/>}/>
         <Route path="/home" element= {<Cards characters={characters} onClose={onClose} />}/>
         <Route path="/about" element= {<About />}/>
         <Route path="/detail/:detailId" element={<Detail/>}/>

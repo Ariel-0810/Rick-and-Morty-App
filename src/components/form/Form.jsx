@@ -3,7 +3,7 @@ import "./Form.module.css";
 //import { useState } from 'react';
 import { validation } from './Validation.js'
 
-export default function Form(){
+export default function Form(props){
     const [userData, setUserData] = React.useState({ username: '', password: '' });
     const [errors, setErrors] = React.useState({username: '', password: ''});
 
@@ -14,11 +14,16 @@ export default function Form(){
                 ...userData,
                 [evento.target.name]: evento.target.value,
              }));             
-    } 
+    }
+
+    const handleSubmit = (evento) => {
+        evento.preventDefault()
+        props.login(userData)
+      }
 
 return (
 <div>
-    <form>
+    <form onSubmit={handleSubmit}>
     <label htmlFor="username">Username: </label>
     <input id="username" name="username" placeholder="Ingrse el usuario..." type="text" value={userData.username} onChange={handleInputChange} className={errors.username && "warning"}/>
     <p>{errors.username}</p>
