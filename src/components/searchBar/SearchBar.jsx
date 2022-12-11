@@ -11,21 +11,29 @@ const DivSearch = styled.div`
 `;
 
 const Btn = styled.button`
-padding: 1em;
-border-radius: 0.5em;
-border-color: #3498db;
-  color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+color: #fff !important;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 0.5em;
+  background: #318aac;
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: #370617;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.Btn:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+&:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
+  border-shadow: 
 `;
 
 const Input = styled.input`
   border-radius: 0.5em;
   margin-left: 0.5em;
+  margin-right: 0.5em; 
   padding: 0.5em;
   border: solid #06d6a0;
   color: #370617;
@@ -48,7 +56,7 @@ border-radius: 3em;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
-.BtnFav:hover {
+&:hover {
   background-position: 100px;
 `;
 
