@@ -1,12 +1,12 @@
 .card{
- background-color: coral;
+ background-color: rgb(232, 255, 80);
  border: solid #06d6a0;
  font-family: rick_and_morty;
- width: 25em;
- height: 32em;
+ width: 10em;
+ height: 20em;
  border-radius: 2em;
  overflow: hidden;
- margin: 2em;
+ margin: 0.5em;
  position: relative;
  box-shadow: 0 0 10px rgba(86, 82, 82, 0.8);
 }

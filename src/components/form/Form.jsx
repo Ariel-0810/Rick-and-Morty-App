@@ -2,6 +2,7 @@ import React from "react";
 import "./Form.module.css";
 //import { useState } from 'react';
 import { validation } from './Validation.js'
+import styles from "./Form.module.css"
 
 export default function Form(props){
     const [userData, setUserData] = React.useState({ username: '', password: '' });
@@ -24,13 +25,13 @@ export default function Form(props){
 return (
 <div>
     <form onSubmit={handleSubmit}>
-    <label htmlFor="username">Username: </label>
+    <label class={styles.userpass} htmlFor="username">Username: </label>
     <input id="username" name="username" placeholder="Ingrse el usuario..." type="text" value={userData.username} onChange={handleInputChange} className={errors.username && "warning"}/>
-    <p>{errors.username}</p>
-    <label htmlFor="password">Password: </label>
+    <p class={styles.danger}>{errors.username}</p>
+    <label class={styles.userpass} htmlFor="password">Password: </label>
     <input id="password" name="password" type="password" value={userData.password} onChange={handleInputChange} className={errors.password && "warning"}/>
-    <p>{errors.password}</p>
-    <input type="submit"/>
+    <p class={styles.danger}>{errors.password}</p>
+    <input class={styles.submit}type="submit"/>
     </form>
 </div>
 );

@@ -30,7 +30,7 @@ export default function Detail() {
 
     return (
     <div>
-        <button onClick={handleClick}>Go Home</button>
+        <button onClick={handleClick}>Atras</button>
         {character ? (
         <div>
             <div>

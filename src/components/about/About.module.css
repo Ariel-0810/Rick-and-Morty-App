@@ -1,6 +1,5 @@
-.div {
-    background-color: yellowgreen;
-    display: flex;
+.divAbout {
+    color: white;    
     justify-content: center;
     align-items: center;
     width: 100vw;

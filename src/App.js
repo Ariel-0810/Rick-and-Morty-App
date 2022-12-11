@@ -3,15 +3,11 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./App.css"
 import About from "./components/about/About";
-//import Card from "./components/card/Card.jsx";
 import Cards from "./components/cards/Cards.jsx";
-//import SearchBar from "./components/searchBar/SearchBar.jsx";
-//import characters from "./data.js"
 import Nav from "./components/nav/Nav.jsx";
 import Detail from "./components/detail/Detail.jsx"
 import Form from "./components/form/Form.jsx"
-
-
+import Favorites from "./components/favorites/Favorites";
 
 
 function App () {
@@ -45,18 +41,6 @@ function App () {
           }
        });
  }
-
-  // const onSearch = () => {
-
-  //   // const example = {
-  //   //   name: 'Morty Smith',
-  //   //   species: 'Human',
-  //   //   gender: 'Male',
-  //   //   image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-  //  //};
-  //  setCharacters([...characters, example])
-  // }
-
   const onClose = (id) => {
     setCharacters(characters.filter(e => e.id !== id))
   };
@@ -77,18 +61,9 @@ function App () {
         <Route path="/home" element= {<Cards characters={characters} onClose={onClose} />}/>
         <Route path="/about" element= {<About />}/>
         <Route path="/detail/:detailId" element={<Detail/>}/>
+        <Route path="/favorites" element={<Favorites />}/>
       </Routes>
-      {/* <div className="divCard">
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        />
-      </div> */}
- 
-    </div>
+      </div>
   );
 }
 

@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://p4.wallpaperbetter.com/wallpaper/441/548/891/rick-and-morty-car-rainbow-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
 }
 
 code {
