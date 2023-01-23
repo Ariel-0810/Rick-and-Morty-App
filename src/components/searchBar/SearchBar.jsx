@@ -23,11 +23,13 @@ color: #fff !important;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 &:hover {
+  cursor: pointer;
   box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
   outline-color: rgba(49, 138, 172, 0);
   outline-offset: 80px;
   text-shadow: 1px 1px 6px #fff;
-  border-shadow: 
+  border-shadow:
+  
 `;
 
 const Input = styled.input`
@@ -58,6 +60,7 @@ border-radius: 3em;
 }
 &:hover {
   background-position: 100px;
+  cursor: pointer;
 `;
 
 const BtnHm = styled.button`

@@ -1,31 +1,32 @@
-.div{
-    background-color: dimgray;
-    font-size: 0.5em;
+.div {
+  background-color: dimgray;
+  font-size: 0.5em;
 }
 
-.button{
-    font-size: 1em;
+.button {
+  font-size: 1em;
 }
 
 .danger {
-    font-size: px;
-    color: rgb(255, 255, 255);
-    margin-left: 7em;
-  }
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-left: 7em;
+}
 
-.userpass{
-    font-size: 1em;
-    color: black;
-    font-weight: bold
-  }
+.userpass {
+  font-size: 1em;
+  color: black;
+  font-weight: bold
+}
 
-.submit{
-    border-color: #3498db;
+.submit {
+  border-color: #3498db;
   color: #fff;
   box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
+
 .submit:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
